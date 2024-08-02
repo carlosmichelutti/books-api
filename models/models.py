@@ -1,9 +1,13 @@
 from models.database import db_connection
 
-from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy.orm import mapped_column
+from sqlalchemy.orm import (
+    DeclarativeBase,
+    Mapped,
+
+    mapped_column,
+)
+
 from sqlalchemy import String, Integer
-from sqlalchemy.orm import Mapped
 
 class Base(DeclarativeBase):
     
@@ -14,7 +18,7 @@ class Base(DeclarativeBase):
 
 class Books(Base):
     __tablename__ = "books"
-    id: Mapped[int] = mapped_column(Integer(), unique=True, autoincrement=True, primary_key=True)
+    id: Mapped[int] = mapped_column(Integer, unique=True, autoincrement=True, primary_key=True)
     category: Mapped[str] = mapped_column(String(50), unique=False, nullable=False)
     title: Mapped[str] = mapped_column(String(200), unique=True, nullable=False)
     price: Mapped[str] = mapped_column(String(50), unique=False, nullable=False)

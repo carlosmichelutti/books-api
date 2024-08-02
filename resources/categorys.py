@@ -1,14 +1,14 @@
-from sqlalchemy import select, func, delete, update
 from models.database import db_connection
-from flask_smorest import Blueprint, abort
-from flask import request, make_response
 from models.models import Books
+
+from flask_smorest import Blueprint
 from flask.views import MethodView
+from sqlalchemy import select
 import pandas as pd
 
 blp = Blueprint("Categorys", __name__, description="Operations on books categorys")
 
-@blp.route(r'/categorys', methods=['GET'])
+@blp.route(r'/categorys')
 class BooksCategorysModelView(MethodView):
 
     def get(self: object) -> dict:
