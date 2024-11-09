@@ -2,9 +2,8 @@ from models.database import db_connection
 
 from sqlalchemy.orm import (
     DeclarativeBase,
-    Mapped,
-
     mapped_column,
+    Mapped,
 )
 
 from sqlalchemy import String, Integer
