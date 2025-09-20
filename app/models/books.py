@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, Integer, Float, DateTime
+
 from database.base import Base
 
 class VwBooks(Base):
