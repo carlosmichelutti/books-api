@@ -1,9 +1,10 @@
 from sqlalchemy import Column, String, Integer
+
 from database.base import Base
 
-class VwCategorys(Base):
+class VwCategories(Base):
 
-    __tablename__ = 'vw_categorys'
+    __tablename__ = 'vw_categories'
     __table_args__ = {
         'extend_existing': True,
         'schema': 'books_api'
