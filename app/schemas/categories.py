@@ -1,9 +1,8 @@
 from pydantic import BaseModel
-from typing import List
 
 class CategoryOut(BaseModel):
 
-    categorys: List[str]
+    categories: list[str]
 
     class Config:
         from_attributes = True
